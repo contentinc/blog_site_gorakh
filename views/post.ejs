@@ -1,0 +1,38 @@
+<article class="post-full">
+    <h1 class="post-title"><%= post.title %></h1>
+    <div class="post-meta">
+        <%= post.createdAt.toLocaleDateString() %>
+    </div>
+    <div class="post-content markdown-content">
+        <%- post.sanitizedHtml %>
+    </div>
+    <a href="/" class="back-link">← Back to Posts</a>
+</article>
+
+<style>
+.post-full {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+</style>
